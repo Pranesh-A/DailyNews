@@ -16,6 +16,9 @@
 		0E082934273FBF11009FFEBD /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E082933273FBF11009FFEBD /* NetworkManager.swift */; };
 		0E08293A273FC0DC009FFEBD /* NewsListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E082939273FC0DC009FFEBD /* NewsListModel.swift */; };
 		0E082942273FC137009FFEBD /* DecodableDefaultSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E082941273FC137009FFEBD /* DecodableDefaultSource.swift */; };
+		0E082947273FC2F3009FFEBD /* NewsListViewModel+INewsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E082946273FC2F3009FFEBD /* NewsListViewModel+INewsListViewModel.swift */; };
+		0E08294C273FC345009FFEBD /* NewsListViewController+NewsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E08294B273FC345009FFEBD /* NewsListViewController+NewsListViewModel.swift */; };
+		0E082951273FC360009FFEBD /* NewsListViewController+INewsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E082950273FC360009FFEBD /* NewsListViewController+INewsListViewController.swift */; };
 		0E0E10E3273FB521009F37F0 /* NewsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0E10E2273FB521009F37F0 /* NewsListViewModel.swift */; };
 		0E0E10EC273FB577009F37F0 /* NewsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0E10EB273FB577009F37F0 /* NewsListViewController.swift */; };
 		0E0E10F6273FB59E009F37F0 /* NewsListContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0E10F5273FB59E009F37F0 /* NewsListContainerView.swift */; };
@@ -61,6 +64,9 @@
 		0E082933273FBF11009FFEBD /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		0E082939273FC0DC009FFEBD /* NewsListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListModel.swift; sourceTree = "<group>"; };
 		0E082941273FC137009FFEBD /* DecodableDefaultSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableDefaultSource.swift; sourceTree = "<group>"; };
+		0E082946273FC2F3009FFEBD /* NewsListViewModel+INewsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewsListViewModel+INewsListViewModel.swift"; sourceTree = "<group>"; };
+		0E08294B273FC345009FFEBD /* NewsListViewController+NewsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewsListViewController+NewsListViewModel.swift"; sourceTree = "<group>"; };
+		0E082950273FC360009FFEBD /* NewsListViewController+INewsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewsListViewController+INewsListViewController.swift"; sourceTree = "<group>"; };
 		0E0E10E2273FB521009F37F0 /* NewsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListViewModel.swift; sourceTree = "<group>"; };
 		0E0E10EB273FB577009F37F0 /* NewsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListViewController.swift; sourceTree = "<group>"; };
 		0E0E10F5273FB59E009F37F0 /* NewsListContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListContainerView.swift; sourceTree = "<group>"; };
@@ -174,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				0E0E10E2273FB521009F37F0 /* NewsListViewModel.swift */,
+				0E082946273FC2F3009FFEBD /* NewsListViewModel+INewsListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -190,6 +197,8 @@
 			isa = PBXGroup;
 			children = (
 				0E0E10EB273FB577009F37F0 /* NewsListViewController.swift */,
+				0E082950273FC360009FFEBD /* NewsListViewController+INewsListViewController.swift */,
+				0E08294B273FC345009FFEBD /* NewsListViewController+NewsListViewModel.swift */,
 				0E0E10F4273FB58C009F37F0 /* SubViews */,
 			);
 			path = Views;
@@ -533,6 +542,7 @@
 				0E082923273FBDC1009FFEBD /* NewsListContainerView+UITableView.swift in Sources */,
 				0E0E10EC273FB577009F37F0 /* NewsListViewController.swift in Sources */,
 				0E6B1ECE273D747A0077D5A6 /* ViewController.swift in Sources */,
+				0E082947273FC2F3009FFEBD /* NewsListViewModel+INewsListViewModel.swift in Sources */,
 				0E082934273FBF11009FFEBD /* NetworkManager.swift in Sources */,
 				0E08293A273FC0DC009FFEBD /* NewsListModel.swift in Sources */,
 				0E082942273FC137009FFEBD /* DecodableDefaultSource.swift in Sources */,
@@ -542,7 +552,9 @@
 				0E082929273FBE85009FFEBD /* NewsService.swift in Sources */,
 				0E08291E273FBDA8009FFEBD /* NewsListContainerView+INewsListContainerView.swift in Sources */,
 				0E08290A273FB860009FFEBD /* Storyboard.swift in Sources */,
+				0E08294C273FC345009FFEBD /* NewsListViewController+NewsListViewModel.swift in Sources */,
 				0E0E10E3273FB521009F37F0 /* NewsListViewModel.swift in Sources */,
+				0E082951273FC360009FFEBD /* NewsListViewController+INewsListViewController.swift in Sources */,
 				0E0E10F6273FB59E009F37F0 /* NewsListContainerView.swift in Sources */,
 				0E082904273FB838009FFEBD /* AppDelegate+ViewSetup.swift in Sources */,
 			);

@@ -5,8 +5,14 @@
 //  Created by Divum on 13/11/21.
 //
 import Foundation
-protocol INewsListViewModel { }
-protocol NewsListViewModelDelegate: class { }
+protocol INewsListViewModel {
+    func getNewsList()
+}
+protocol NewsListViewModelDelegate: class {
+    func getNewsListSuccessResponse()
+    func getNewsListFailureResponse()
+}
 class NewsListViewModel {
     weak var delegate: NewsListViewModelDelegate?
+    var newsListModel: NewsListModel!
 }

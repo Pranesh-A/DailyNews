@@ -9,7 +9,7 @@ import Alamofire
 class NewsService {
     private static let sharedInstance = NewsService()
     private init () { }
-    static func fetchNewsList(_ success: @escaping ((_ response: NewsListModel) -> Void), _ failure: @escaping (() -> Void)) {
+    static func fetchNewsList(_ success: @escaping ((_ response: NewsListModel) -> Void), failure: @escaping (() -> Void)) {
         NewsService.sharedInstance.fetchNewsList({ newsListModel in success(newsListModel) }, { failure() })
     }
 }
