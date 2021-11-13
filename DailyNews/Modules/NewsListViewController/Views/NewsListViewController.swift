@@ -18,6 +18,7 @@ class NewsListViewController: UIViewController {
         getNewsList()
     }
     private func setupNewsListContainerView() {
+        newsListContainerView.delegate = self
         newsListContainerView.setupNewsListContainerView()
     }
     private func setupNewsListViewModel() {

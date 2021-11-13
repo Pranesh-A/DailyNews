@@ -19,6 +19,11 @@ extension NewsListContainerView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         UITableView.automaticDimension
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let newsTableViewCellSetup: NewsTableViewCellSetup = tableViewCellSetups[indexPath.section] as? NewsTableViewCellSetup else { return }
+        let news = newsTableViewCellSetup.newsList[indexPath.row]
+        delegate?.showNewsDetailScreen(news)
+    }
     private func getTableViewData(_ section: Int) -> Int {
         if let newsTableViewCellSetup = tableViewCellSetups[section] as? NewsTableViewCellSetup {
             return newsTableViewCellSetup.newsList.count

@@ -15,4 +15,5 @@ protocol NewsListViewModelDelegate: class {
 class NewsListViewModel {
     weak var delegate: NewsListViewModelDelegate?
     var newsListModel: NewsListModel!
+    var selectedNews: NewsInfo!
 }

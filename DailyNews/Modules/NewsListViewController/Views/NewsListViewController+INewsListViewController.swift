@@ -10,4 +10,7 @@ extension NewsListViewController: INewsListViewController {
         displayActivityIndicator(shouldDisplay: true)
         newsListViewModel.getNewsList()
     }
+    func refreshNews() {
+        getNewsList()
+    }
 }

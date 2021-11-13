@@ -8,12 +8,18 @@ import UIKit
 protocol INewsListContainerView {
     func setupTableViewCellSetups()
 }
+protocol NewsListContainerViewDelegate: class {
+    func showNewsDetailScreen(_ selectedNews: NewsInfo)
+    func refreshNews()
+}
 class NewsListContainerView: UIView {
     static let identifier = String(describing: NewsListContainerView.self)
     @IBOutlet var containerView: UIView!
     @IBOutlet weak var tableView: UITableView!
+    weak var delegate: NewsListContainerViewDelegate?
     var tableViewCellSetups: [TableViewCellSetup] = []
     var newsList: [NewsInfo] = []
+    var refreshControl = UIRefreshControl()
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
@@ -45,8 +51,15 @@ class NewsListContainerView: UIView {
     private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
+        tableView.addSubview(refreshControl)
+    }
+    @objc func refresh(_ sender: AnyObject) {
+        delegate?.refreshNews()
     }
     private func reloadTableView() {
+        refreshControl.endRefreshing()
         tableViewCellSetups.sort(by: { $0.index < $1.index })
         tableView.reloadData()
     }
