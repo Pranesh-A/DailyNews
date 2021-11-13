@@ -7,9 +7,10 @@
 import Foundation
 extension NewsListViewController: NewsListViewModelDelegate {
     func getNewsListSuccessResponse() {
-        
+        displayActivityIndicator(shouldDisplay: false)
+        newsListContainerView.refreshNewsListContainerView(newsListViewModel.newsListModel.articles)
     }
     func getNewsListFailureResponse() {
-        
+        displayActivityIndicator(shouldDisplay: false)
     }
 }

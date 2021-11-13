@@ -7,6 +7,7 @@
 import Foundation
 extension NewsListViewController: INewsListViewController {
     func getNewsList() {
+        displayActivityIndicator(shouldDisplay: true)
         newsListViewModel.getNewsList()
     }
 }

@@ -13,6 +13,7 @@ class NewsListContainerView: UIView {
     @IBOutlet var containerView: UIView!
     @IBOutlet weak var tableView: UITableView!
     var tableViewCellSetups: [TableViewCellSetup] = []
+    var newsList: [NewsInfo] = []
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
@@ -33,6 +34,12 @@ class NewsListContainerView: UIView {
     }
     func setupNewsListContainerView() {
         setupTableViewCellSetups()
+        reloadTableView()
+    }
+    func refreshNewsListContainerView(_ newsList: [NewsInfo]) {
+        self.newsList = newsList
+        guard let newsTableViewCellSetup = tableViewCellSetups.filter({ $0.tableViewCellIdentifier == NewsTableViewCell.identifier }).first as? NewsTableViewCellSetup else { return }
+        newsTableViewCellSetup.reloadViewWith(data: newsList)
         reloadTableView()
     }
     private func setupTableView() {

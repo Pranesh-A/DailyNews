@@ -6,5 +6,12 @@
 //
 import Foundation
 extension NewsListContainerView: INewsListContainerView {
-    func setupTableViewCellSetups() { }
+    func setupTableViewCellSetups() {
+        tableViewCellSetups.append(getNewsTableViewCellSetup(0))
+    }
+    private func getNewsTableViewCellSetup(_ index: Int) -> NewsTableViewCellSetup {
+        let newsTableViewCellSetup = NewsTableViewCellSetup(tableView: tableView, index: index, newsList: newsList)
+        newsTableViewCellSetup.registerTableViewCell()
+        return newsTableViewCellSetup
+    }
 }

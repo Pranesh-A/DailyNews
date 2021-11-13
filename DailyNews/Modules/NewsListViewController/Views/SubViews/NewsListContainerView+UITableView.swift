@@ -20,6 +20,9 @@ extension NewsListContainerView: UITableViewDelegate, UITableViewDataSource {
         UITableView.automaticDimension
     }
     private func getTableViewData(_ section: Int) -> Int {
-        return 1
+        if let newsTableViewCellSetup = tableViewCellSetups[section] as? NewsTableViewCellSetup {
+            return newsTableViewCellSetup.newsList.count
+        }
+        return 0
     }
 }
