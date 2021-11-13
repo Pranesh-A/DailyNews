@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="K8V-aB-XqF">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--News List View Controller-->
+        <scene sceneID="waE-EQ-Ffh">
+            <objects>
+                <viewController id="K8V-aB-XqF" customClass="NewsListViewController" customModule="DailyNews" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LLf-Md-BwX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oOh-Sb-mKF" customClass="NewsListContainerView" customModule="DailyNews" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NGH-au-ngW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="oOh-Sb-mKF" firstAttribute="leading" secondItem="NGH-au-ngW" secondAttribute="leading" id="YHs-22-Ipg"/>
+                            <constraint firstItem="oOh-Sb-mKF" firstAttribute="top" secondItem="NGH-au-ngW" secondAttribute="top" id="dUh-Su-oQy"/>
+                            <constraint firstItem="NGH-au-ngW" firstAttribute="trailing" secondItem="oOh-Sb-mKF" secondAttribute="trailing" id="e4Z-u5-ScJ"/>
+                            <constraint firstItem="NGH-au-ngW" firstAttribute="bottom" secondItem="oOh-Sb-mKF" secondAttribute="bottom" id="p2N-fl-KjL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="newsListContainerView" destination="oOh-Sb-mKF" id="h9h-0d-axT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AFl-fz-Gu2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="414" y="129"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
