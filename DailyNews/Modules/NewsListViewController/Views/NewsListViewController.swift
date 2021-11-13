@@ -25,7 +25,7 @@ class NewsListViewController: UIViewController {
         newsListViewModel.delegate = self
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let newsDetailViewController: NewsDetailViewController = segue.destination as? NewsDetailViewController {
+        if let navigationController = segue.destination as? UINavigationController, let newsDetailViewController: NewsDetailViewController = navigationController.topViewController as? NewsDetailViewController {
             newsDetailViewController.newsDetailViewModel.selectedNews = newsListViewModel.selectedNews
         }
     }

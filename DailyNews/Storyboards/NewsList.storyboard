@@ -43,7 +43,9 @@
         <!--NewsDetail-->
         <scene sceneID="eTu-RG-fud">
             <objects>
-                <viewControllerPlaceholder storyboardName="NewsDetail" id="Ueb-qI-Z6t" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="NewsDetail" id="Ueb-qI-Z6t" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="C20-FB-5l5"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KPL-8N-3yJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1081" y="128"/>
