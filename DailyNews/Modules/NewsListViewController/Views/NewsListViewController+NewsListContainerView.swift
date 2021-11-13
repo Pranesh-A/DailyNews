@@ -8,5 +8,6 @@ import Foundation
 extension NewsListViewController: NewsListContainerViewDelegate {
     func showNewsDetailScreen(_ selectedNews: NewsInfo) {
         newsListViewModel.selectedNews = selectedNews
+        performSegue(withIdentifier: Segue.newsDetailSegue.rawValue, sender: self)
     }
 }

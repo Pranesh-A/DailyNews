@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="S2J-QK-vEv">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--News Detail View Controller-->
+        <scene sceneID="6My-mm-9U4">
+            <objects>
+                <viewController id="S2J-QK-vEv" customClass="NewsDetailViewController" customModule="DailyNews" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dk2-Uo-M7s">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hM4-20-Jxh" customClass="NewsDetailContainerView" customModule="DailyNews" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bLS-wt-tYG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hM4-20-Jxh" firstAttribute="leading" secondItem="bLS-wt-tYG" secondAttribute="leading" id="REA-67-xXs"/>
+                            <constraint firstItem="bLS-wt-tYG" firstAttribute="bottom" secondItem="hM4-20-Jxh" secondAttribute="bottom" id="cKr-lI-WgV"/>
+                            <constraint firstItem="bLS-wt-tYG" firstAttribute="trailing" secondItem="hM4-20-Jxh" secondAttribute="trailing" id="t1v-Up-55O"/>
+                            <constraint firstItem="hM4-20-Jxh" firstAttribute="top" secondItem="bLS-wt-tYG" secondAttribute="top" id="uXo-16-hZr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="newsDetailContainerView" destination="hM4-20-Jxh" id="K5F-0s-wzu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jqc-MP-RHF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="41" y="102"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

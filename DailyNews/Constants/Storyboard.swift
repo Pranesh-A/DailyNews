@@ -5,12 +5,12 @@
 //  Created by Divum on 13/11/21.
 //
 import Foundation
-import Foundation
 enum Storyboard {
-    case newsList
+    case newsList, newsDetail
     var name: String {
         switch self {
         case .newsList: return "NewsList"
+        case .newsDetail: return "NewsDetail"
         }
     }
 }

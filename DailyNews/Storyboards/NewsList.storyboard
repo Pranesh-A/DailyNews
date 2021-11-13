@@ -33,11 +33,20 @@
                     </view>
                     <connections>
                         <outlet property="newsListContainerView" destination="oOh-Sb-mKF" id="h9h-0d-axT"/>
+                        <segue destination="Ueb-qI-Z6t" kind="presentation" identifier="NewsDetailSegue" id="7C1-Vw-aty"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AFl-fz-Gu2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="414" y="129"/>
+        </scene>
+        <!--NewsDetail-->
+        <scene sceneID="eTu-RG-fud">
+            <objects>
+                <viewControllerPlaceholder storyboardName="NewsDetail" id="Ueb-qI-Z6t" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KPL-8N-3yJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1081" y="128"/>
         </scene>
     </scenes>
     <resources>
